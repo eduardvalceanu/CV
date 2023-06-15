@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index-style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css"></link>
+  <title>Eduard Valceanu</title>
+</head>
+<body>
+  <div id="header">
+    <div class="container">
+      <nav>
+        <h1 class="logo"><span>E</span>duard.</h1>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-text">
+        <p>Future Web Developer</p>
+        <h1>Hi, I am <span>Eduard</span><br>Valceanu from Romania</h1>
+        <div class="image"></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="about">
+    <div class="container">
+      <div class="row">
+        <div class="about-col-1">
+          <img src="images/image.jpeg">
+        </div>
+        <div class="about-col-2">
+          <h1 class="sub-title">About me</h1>
+          <p>I attended a Computer Science Highschool, where I discovered coding. We learned C++, HTML and CSS. It was a new interesting topic for me, so I researched and learned on my own, mostly from YouTube and forums.</p>
+          <p>After graduating Highschool, I applied for a Business and Administration Degree in Finland, where I currently study in the third and final year. I stopped coding on focused on other things.</p>
+          <p>I have been working in the Automotive field as a Quality Analyst Tehnician in the UX Department, and also developing an UX Learning Center for Continental. I mainly used Sharepoint, Sharepoint Lists and Power Automate for this project.</p>
+          <p>While developing automations for the Learning Center, I rediscovered my passion for coding, and decided to apply for an internship in the field.</p>
+
+          <div class="tab-titles">
+            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+            <p class="tab-links" onclick="opentab('education')">Education</p>
+          </div>
+          <div class="tab-contents active-tab" id="skills">
+            <ul>
+              <li><span>GIT</span><br>Git and GitHub Foundation</li>
+              <li><span>Web Development</span><br>HTML and CSS Foundation</li>
+              <li><span>Microsoft</span><br>Sharepoint, Power Automate, Excel</li>
+              <li><span>The Most Important Skill</span><br>Using Google to research problems</li>
+
+            </ul>
+          </div>
+          <div class="tab-contents" id="experience">
+            <ul>
+              <li><span>Continental Automotive</span><br>April 2023 - Current</li>
+            </ul>
+          </div>
+          <div class="tab-contents" id="education">
+            <ul>
+              <li><span>Liceul Teoretic Jean Louis Calderon (Mate-Info)</span><br>2016 - 2020</li>
+              <li><span>Kajaani University of Applied Sciences (KAMK)</span><br>2020 - Current</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="portfolio">
+    <div class="container">
+      <h1 class="sub-title">My Work</h1>
+      <div class="work-list">
+        <div class="work">
+          <img src="images/Project.PNG"> 
+          <div class="layer">
+            <h3>Recipe Website</h3>
+            <p>A simple project, part of the Odin Project learning resource.</p>
+            <a href="https://eduardvalceanu.github.io/odin-recipes/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="contact">
+          <h1 class="sub-title">Contact Me</h1>
+          <p><i class="fa-solid fa-paper-plane"></i> eduard.valceanu@yahoo.com</p>
+          <p><i class="fa-solid fa-phone"></i> +40732153807</p>
+          <div class="social-icons">
+            <a href="https://www.linkedin.com/in/valceanu-eduard-1bb9281a1" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+          </div>
+          <a href="#" class="btn">Download CV</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+      for(tablink of tablinks){
+        tablink.classList.remove("active-link");
+      }
+      for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
+      }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+    }
+  </script>
+</body>
+</html>
